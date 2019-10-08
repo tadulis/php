@@ -21,8 +21,7 @@ $auto = [
             "fuel" => "Diesel",
         ],
     ],
-
-
 ];
 
+$shorts =[ "model", "fuel"];
 ?>

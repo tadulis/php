@@ -60,16 +60,16 @@ include "app/php/php.php";
     </thead>
     <tbody>
     <tr>
-        <td></td>
+        <td><?php print $shorts[0]; ?></td>
         <?php foreach ($auto as $key => $value): ?>
             <td><?php print $value[0]["model"]; ?></td>
-            <td><?php print $value[0]["fuel"]; ?></td>
+            <td><?php print $value[1]["model"]; ?></td>
         <?php endforeach; ?>
     </tr>
     <tr>
-        <td></td>
+        <td><?php print $shorts[1]; ?></td>
         <?php foreach ($auto as $key => $value): ?>
-            <td><?php print $value[1]["model"]; ?></td>
+            <td><?php print $value[0]["fuel"]; ?></td>
             <td><?php print $value[1]["fuel"]; ?></td>
         <?php endforeach; ?>
     </tr>
