@@ -53,12 +53,26 @@ include "app/php/php.php";
 
 <table>
     <thead>
+    <th></th>
     <?php foreach ($auto as $key => $value): ?>
-        <th><?php print $key; ?></th>
+        <th colspan="2"><?php print $key; ?></th>
     <?php endforeach; ?>
     </thead>
     <tbody>
-
+    <tr>
+        <td></td>
+        <?php foreach ($auto as $key => $value): ?>
+            <td><?php print $value[0]["model"]; ?></td>
+            <td><?php print $value[0]["fuel"]; ?></td>
+        <?php endforeach; ?>
+    </tr>
+    <tr>
+        <td></td>
+        <?php foreach ($auto as $key => $value): ?>
+            <td><?php print $value[1]["model"]; ?></td>
+            <td><?php print $value[1]["fuel"]; ?></td>
+        <?php endforeach; ?>
+    </tr>
     </tbody>
 </table>
 
