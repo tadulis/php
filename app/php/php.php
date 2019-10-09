@@ -68,6 +68,20 @@ $alkoholis = [
             "laipsniai" => 4.5,
             "img" => "https://www.vynoteka.lt/media/cache/thumbnail_270x1000/uploads/photos/0f2fd556de586d2aa89b855cef91c7279a61cd53.jpeg",
         ],
+        [
+            "pavadinimas" => "SOMERSBY APPLE",
+            "turis" => 0.5,
+            "kaina" => 1.89,
+            "laipsniai" => 4.5,
+            "img" => "https://www.vynoteka.lt/media/cache/thumbnail_270x1000/uploads/photos/fc99ae773a9a5823a301f55557d8141f8e792a41.jpeg",
+        ],
+        [
+            "pavadinimas" => "SOMERSBY PEAR",
+            "turis" => 0.5,
+            "kaina" => 1.89,
+            "laipsniai" => 4.5,
+            "img" => "https://www.vynoteka.lt/media/cache/thumbnail_270x1000/uploads/photos/0f2fd556de586d2aa89b855cef91c7279a61cd53.jpeg",
+        ],
     ],
     "vynas" => [
         [
@@ -87,5 +101,6 @@ $alkoholis = [
     ],
 ];
 
-var_dump($alkoholis);
+
+
 ?>

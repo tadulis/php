@@ -48,9 +48,80 @@ include "app/php/php.php";
         </ul>
     </div>
 </nav>
-<p>Cia yra pagrindinis index.php</p>
+<main>
+    <h1>Tekila:</h1>
 
+    <?php foreach ($alkoholis["tekila"] as $key => $value): ?>
+        <section class="card col-4">
+            <img src="<?php print $value["img"]; ?>" alt="">
+            <h2><?php print $value["pavadinimas"]; ?></h2>
+            <p><?php print $value["turis"]; ?></p>
+            <p><?php print $value["laipsniai"]; ?></p>
+            <p><?php print $value["kaina"]; ?></p>
+        </section>
+    <?php endforeach; ?>
 
+    <h1>Degtine:</h1>
+
+    <?php foreach ($alkoholis["degtine"] as $key => $value): ?>
+        <section class="card col-4">
+            <img src="<?php print $value["img"]; ?>" alt="">
+            <h2><?php print $value["pavadinimas"]; ?></h2>
+            <p><?php print $value["turis"]; ?></p>
+            <p><?php print $value["laipsniai"]; ?></p>
+            <p><?php print $value["kaina"]; ?></p>
+        </section>
+    <?php endforeach; ?>
+
+    <h1>Alus(sviesus):</h1>
+
+    <?php foreach ($alkoholis["alus"]["sviesus"] as $key => $value): ?>
+        <section class="card col-4">
+            <img src="<?php print $value["img"]; ?>" alt="">
+            <h2><?php print $value["pavadinimas"]; ?></h2>
+            <p><?php print $value["turis"]; ?></p>
+            <p><?php print $value["laipsniai"]; ?></p>
+            <p><?php print $value["kaina"]; ?></p>
+        </section>
+    <?php endforeach; ?>
+
+    <h1>Alus(tamsus):</h1>
+
+    <?php foreach ($alkoholis["alus"]["tamsus"] as $key => $value): ?>
+        <section class="card col-4">
+            <img src="<?php print $value["img"]; ?>" alt="">
+            <h2><?php print $value["pavadinimas"]; ?></h2>
+            <p><?php print $value["turis"]; ?></p>
+            <p><?php print $value["laipsniai"]; ?></p>
+            <p><?php print $value["kaina"]; ?></p>
+        </section>
+    <?php endforeach; ?>
+
+    <h1>Sidras:</h1>
+
+    <?php foreach ($alkoholis["sidras"] as $key => $value): ?>
+        <section class="card col-4">
+            <img src="<?php print $value["img"]; ?>" alt="">
+            <h2><?php print $value["pavadinimas"]; ?></h2>
+            <p><?php print $value["turis"]; ?></p>
+            <p><?php print $value["laipsniai"]; ?></p>
+            <p><?php print $value["kaina"]; ?></p>
+        </section>
+    <?php endforeach; ?>
+
+    <h1>Vynas:</h1>
+
+    <?php foreach ($alkoholis["vynas"] as $key => $value): ?>
+        <section class="card col-4">
+            <img src="<?php print $value["img"]; ?>" alt="">
+            <h2><?php print $value["pavadinimas"]; ?></h2>
+            <p><?php print $value["turis"]; ?></p>
+            <p><?php print $value["laipsniai"]; ?></p>
+            <p><?php print $value["kaina"]; ?></p>
+        </section>
+    <?php endforeach; ?>
+
+</main>
 
 
 <!--bootstrap js-->
