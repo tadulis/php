@@ -49,7 +49,7 @@ include "app/php/php.php";
     </div>
 </nav>
 <p>Cia yra pagrindinis index.php</p>
-<?php print $tekstas; ?>
+
 
 
 
