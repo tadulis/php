@@ -1,27 +1,48 @@
 <?php
 
-$auto = [
-    "Audi" => [
+$mokyklos = ["Mokykla1", "Mokykla2", "Mokykla3", "Mokykla4", "Mokykla5"];
+
+print $mokyklos[2];
+
+//_______________________________
+
+$mokymoIstaigos = [
+    "kolegijos" => [
         [
-            "model" => "A1",
-            "fuel" => "Petrol",
+            "name" => "Kolegija1",
+            "address" => "Adresas1",
         ],
         [
-            "model" => "Q3",
-            "fuel" => "Diesel",
+            "name" => "Kolegija2",
+            "address" => "Adresas2",
         ],
     ],
-    "BMW" => [
+    "universitetai" => [
         [
-            "model" => "530",
-            "fuel" => "Petrol",
+            "name" => "Universitetas1",
+            "address" => "Adresas1",
         ],
         [
-            "model" => "420",
-            "fuel" => "Diesel",
+            "name" => "Universitetas2",
+            "address" => "Adresas2",
         ],
     ],
 ];
 
-$shorts =[ "model", "fuel"];
+foreach ($mokymoIstaigos["kolegijos"] as $key => $value){
+    print $value["name"];
+}
+//_____________________________
+
+$amzius = 36;
+
+if ($amzius >= 16 && $amzius <= 25){
+    $tekstas = "Tavo amzius $amzius. Minimalus laikas 13min 27s";
+}elseif ($amzius >= 26 && $amzius <= 32){
+    $tekstas = "Tavo amzius $amzius. Minimalus laikas 15min 10s";
+}else{
+    $tekstas = "Tavo amzius $amzius. Minimalus laikas 17min 00s";
+}
+
+
 ?>

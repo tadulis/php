@@ -49,32 +49,9 @@ include "app/php/php.php";
     </div>
 </nav>
 <p>Cia yra pagrindinis index.php</p>
+<?php print $tekstas; ?>
 
 
-<table>
-    <thead>
-    <th></th>
-    <?php foreach ($auto as $key => $value): ?>
-        <th colspan="2"><?php print $key; ?></th>
-    <?php endforeach; ?>
-    </thead>
-    <tbody>
-    <tr>
-        <td><?php print $shorts[0]; ?></td>
-        <?php foreach ($auto as $key => $value): ?>
-            <td><?php print $value[0]["model"]; ?></td>
-            <td><?php print $value[1]["model"]; ?></td>
-        <?php endforeach; ?>
-    </tr>
-    <tr>
-        <td><?php print $shorts[1]; ?></td>
-        <?php foreach ($auto as $key => $value): ?>
-            <td><?php print $value[0]["fuel"]; ?></td>
-            <td><?php print $value[1]["fuel"]; ?></td>
-        <?php endforeach; ?>
-    </tr>
-    </tbody>
-</table>
 
 <!--bootstrap js-->
 <script src="./assets/js/jqery.js"></script>
