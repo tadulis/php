@@ -48,17 +48,37 @@ include "app/php/php.php";
         </ul>
     </div>
 </nav>
-<section class="col-5 mx-auto">
-    <form action="">
-        <select class="form-control" id="exampleFormControlSelect1">
-            <?php foreach ($jayParsedAry as $country): ?>
-            <option value="<?php print $country["dial_code"]; ?>"><?php print $country["name"]; ?></option>
-            <?php endforeach; ?>
-        </select>
-    </form>
+
+<form action="" method="post" class="col-5 mx-auto">
+    <select class="form-control" id="exampleFormControlSelect1" name="kebaboTipas">
+        <?php foreach ($uzsakymai["kebabas"]["kebaboTipas"] as $kebaboKey => $kebaboTipas): ?>
+            <option value="<?php print $kebaboKey; ?>"><?php print $kebaboTipas; ?></option>
+        <?php endforeach; ?>
+    </select>
+    <select class="form-control" id="exampleFormControlSelect1" name="kebaboDydis">
+        <?php foreach ($uzsakymai["kebabas"]["dydis"] as $kebaboKey => $kebaboDydis): ?>
+            <option value="<?php print $kebaboKey; ?>"><?php print $kebaboDydis; ?></option>
+        <?php endforeach; ?>
+    </select>
+    <select class="form-control" id="exampleFormControlSelect1" name="kebaboMesa">
+        <?php foreach ($uzsakymai["kebabas"]["mesa"] as $kebaboKey => $kebaboMesa): ?>
+            <option value="<?php print $kebaboKey; ?>"><?php print $kebaboMesa; ?></option>
+        <?php endforeach; ?>
+    </select>
+    <select class="form-control" id="exampleFormControlSelect1" name="kebaboPadazas">
+        <?php foreach ($uzsakymai["kebabas"]["padazai"] as $kebaboKey => $kebaboPadazas): ?>
+            <option value="<?php print $kebaboKey; ?>"><?php print $kebaboPadazas; ?></option>
+        <?php endforeach; ?>
+    </select>
+    <input type="submit">
+</form>
+
+<section class="order col-6 mx-auto d-flex">
+    <h3><?php print $_POST["kebaboTipas"]; ?></h3>
+    <h3><?php print $_POST["kebaboDydis"]; ?></h3>
+    <h3><?php print $_POST["kebaboMesa"]; ?></h3>
+    <h3><?php print $_POST["kebaboPadazas"]; ?></h3>
 </section>
-
-
 
 <!--bootstrap js-->
 <script src="./assets/js/jqery.js"></script>
