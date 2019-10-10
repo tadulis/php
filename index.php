@@ -48,6 +48,15 @@ include "app/php/php.php";
         </ul>
     </div>
 </nav>
+<section class="col-5 mx-auto">
+    <form action="">
+        <select class="form-control" id="exampleFormControlSelect1">
+            <?php foreach ($jayParsedAry as $country): ?>
+            <option value="<?php print $country["dial_code"]; ?>"><?php print $country["name"]; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </form>
+</section>
 
 
 
