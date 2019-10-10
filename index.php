@@ -73,12 +73,34 @@ include "app/php/php.php";
     <input type="submit">
 </form>
 
+<?php
+
+//if ($_POST["kebaboTipas"] == 0){
+//    $kebaboTipas = $uzsakymai["kebabas"]["kebaboTipas"][0];
+//}elseif ($_POST["kebaboTipas"] == 1){
+//    $kebaboTipas = $uzsakymai["kebabas"]["kebaboTipas"][1];
+//}elseif ($_POST["kebaboTipas"] == 2){
+//    $kebaboTipas = $uzsakymai["kebabas"]["kebaboTipas"][2];
+//}
+
+
+if ($_POST["kebaboDydis"] == array_keys($uzsakymai["kebabas"]["kebaboTipas"])[0]) {
+    $kintamasis = $uzsakymai["kebabas"]["kebaboTipas"][0];
+} elseif ($_POST["kebaboDydis"] == array_keys($uzsakymai["kebabas"]["kebaboTipas"])[1]) {
+    $kintamasis = $uzsakymai["kebabas"]["kebaboTipas"][1];
+    var_dump($kintamasis);
+} elseif ($_POST["kebaboDydis"] == array_keys($uzsakymai["kebabas"]["kebaboTipas"])[2]) {
+    $kintamasis = $uzsakymai["kebabas"]["kebaboTipas"][2];
+}
+?>
+
 <section class="order col-6 mx-auto d-flex">
-    <h3><?php print $_POST["kebaboTipas"]; ?></h3>
+    <h3><?php print $kintamasis; ?></h3>
     <h3><?php print $_POST["kebaboDydis"]; ?></h3>
     <h3><?php print $_POST["kebaboMesa"]; ?></h3>
     <h3><?php print $_POST["kebaboPadazas"]; ?></h3>
 </section>
+
 
 <!--bootstrap js-->
 <script src="./assets/js/jqery.js"></script>
