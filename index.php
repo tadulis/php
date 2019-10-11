@@ -49,8 +49,6 @@ include "app/php/php.php";
     </div>
 </nav>
 
-<h1><?php print $pirmasisPavadinimas; ?></h1>
-
 
 <!--bootstrap js-->
 <script src="./assets/js/jqery.js"></script>
