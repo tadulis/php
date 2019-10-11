@@ -1,49 +1,52 @@
 <?php
-//sukuriam daugiamati masyva
-//$array = [
-//    "vyrai" => ["Lukas", "Gytis",],
-//    "moterys" => ["Kornelija", "Ieva",],
-//];
-//
-//
-//foreach ($array["vyrai"] as $key => $value) {
-//     print $value; // atvaizduoja visus vyrus
-//}
-//
-//foreach ($array["moterys"] as $key => $value) {
-//    print $value; // atvaizduoja visas moteris
-//}
-//
-//foreach ($array as $value){
-//    foreach ($value as $kazkas){ //nera teiinga kartoti foreach
-//        print $kazkas;
-//    }
-//}
+// Ekrane atvaizduoti zmogaus gaunama valandine alga
+// Kai jo valandinis uzmokestis 4.53 Eur o dirba 6h
+// per diena.
 
-//__________________________
+//Sukurti daugiamati masyva kuriame butu atvaizduojama
+//kompiuterio pavadinimas ir kaina.
+// Naudojant ciklus atvaizduoti tas kompiuteriu kainas
+//kurios yra FLOAT tipo. p.s. priskiriant kainas naujam
+//kintamajam.
 
-//$kintamasis = 1;
+//Sukurti masyva 5 elementu kuriame atsivaizduotu savaites
+//dienu temperatura atsitiktinai ir atvaizduoti ekrane
+//nuo maziausios iki diziausios to masyvo temperaturos.
 
-//if($kintamasis === 1){
-//    print "$kintamasis kintamasis yra identiskas.";
-//}elseif ($kintamasis == 1 ){
-//    print "$kintamasis yra lygus vienam.";
-//}else{
-//    print "$kintamasis yra kazkoks.";
-//}
+$valandineAlga = 4.53;
+
+for ($i = 1; $i < 7; $i++) {
+    print $i * $valandineAlga . "<br>";
+}
 
 //_____________________________
 
-//prasideda nuo 10, trunka kol tenkinama sayga <20, kas cikla padideja 4 vnt
-//for ($i=10; $i<20; $i+=4){
-//    print "$i <br>";
-//}
-//_________________________________
+$kompiuteriai = [
+    [
+        "name" => "Macentos",
+        "price" => 3,
+    ],
+    [
+        "name" => "Dezinis",
+        "price" => 3.3,
+    ],
+    [
+        "name" => "Karutinis",
+        "price" => 7.5,
+    ],
+    [
+        "name" => "Mazasis",
+        "price" => 1,
+    ],
+];
 
-//for ($i = 1.37; $i <= 21; $i += 1.37) {
-//    print $i . "<br>";
-//}
+foreach ($kompiuteriai as $key => $value){
+    if (is_float($value["price"])){
+        print $value["price"] . "<br>";
+    }
+}
 
+//______________________________
 
 
 ?>
