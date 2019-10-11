@@ -49,57 +49,7 @@ include "app/php/php.php";
     </div>
 </nav>
 
-<form action="" method="post" class="col-5 mx-auto">
-    <select class="form-control" id="exampleFormControlSelect1" name="kebaboTipas">
-        <?php foreach ($uzsakymai["kebabas"]["kebaboTipas"] as $kebaboKey => $kebaboTipas): ?>
-            <option value="<?php print $kebaboKey; ?>"><?php print $kebaboTipas; ?></option>
-        <?php endforeach; ?>
-    </select>
-    <select class="form-control" id="exampleFormControlSelect1" name="kebaboDydis">
-        <?php foreach ($uzsakymai["kebabas"]["dydis"] as $kebaboKey => $kebaboDydis): ?>
-            <option value="<?php print $kebaboKey; ?>"><?php print $kebaboDydis; ?></option>
-        <?php endforeach; ?>
-    </select>
-    <select class="form-control" id="exampleFormControlSelect1" name="kebaboMesa">
-        <?php foreach ($uzsakymai["kebabas"]["mesa"] as $kebaboKey => $kebaboMesa): ?>
-            <option value="<?php print $kebaboKey; ?>"><?php print $kebaboMesa; ?></option>
-        <?php endforeach; ?>
-    </select>
-    <select class="form-control" id="exampleFormControlSelect1" name="kebaboPadazas">
-        <?php foreach ($uzsakymai["kebabas"]["padazai"] as $kebaboKey => $kebaboPadazas): ?>
-            <option value="<?php print $kebaboKey; ?>"><?php print $kebaboPadazas; ?></option>
-        <?php endforeach; ?>
-    </select>
-    <input type="submit">
-</form>
 
-<?php
-
-//if ($_POST["kebaboTipas"] == 0){
-//    $kebaboTipas = $uzsakymai["kebabas"]["kebaboTipas"][0];
-//}elseif ($_POST["kebaboTipas"] == 1){
-//    $kebaboTipas = $uzsakymai["kebabas"]["kebaboTipas"][1];
-//}elseif ($_POST["kebaboTipas"] == 2){
-//    $kebaboTipas = $uzsakymai["kebabas"]["kebaboTipas"][2];
-//}
-
-
-if ($_POST["kebaboDydis"] == array_keys($uzsakymai["kebabas"]["kebaboTipas"])[0]) {
-    $kintamasis = $uzsakymai["kebabas"]["kebaboTipas"][0];
-} elseif ($_POST["kebaboDydis"] == array_keys($uzsakymai["kebabas"]["kebaboTipas"])[1]) {
-    $kintamasis = $uzsakymai["kebabas"]["kebaboTipas"][1];
-    var_dump($kintamasis);
-} elseif ($_POST["kebaboDydis"] == array_keys($uzsakymai["kebabas"]["kebaboTipas"])[2]) {
-    $kintamasis = $uzsakymai["kebabas"]["kebaboTipas"][2];
-}
-?>
-
-<section class="order col-6 mx-auto d-flex">
-    <h3><?php print $kintamasis; ?></h3>
-    <h3><?php print $_POST["kebaboDydis"]; ?></h3>
-    <h3><?php print $_POST["kebaboMesa"]; ?></h3>
-    <h3><?php print $_POST["kebaboPadazas"]; ?></h3>
-</section>
 
 
 <!--bootstrap js-->
